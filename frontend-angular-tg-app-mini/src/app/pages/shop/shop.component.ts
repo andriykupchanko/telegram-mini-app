@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-shop',
   standalone: true,
   imports: [],
-  template: `<h1>fsdsfdfs</h1>`,
+  template: `<h1></h1>`,
 
 })
 export class ShopComponent {
