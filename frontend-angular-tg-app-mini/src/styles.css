@@ -61,3 +61,16 @@ hr{
     margin-bottom: var(--main-padding);
     cursor: pointer;
 }
+.product-image { 
+    display: flex;
+    justify-content: center;
+    background: var(--tg-theme-secondary-bg-color);
+    text-align: center;
+}
+.product-image img{ 
+    display: block;
+    padding: 10px;
+}
+.product-info{
+    padding: var(--main-padding);
+}
