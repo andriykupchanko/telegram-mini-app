@@ -61,7 +61,8 @@ hr{
     margin-bottom: var(--main-padding);
     cursor: pointer;
 }
-.product-image { 
+.product-image {
+     
     display: flex;
     justify-content: center;
     background: var(--tg-theme-secondary-bg-color);
