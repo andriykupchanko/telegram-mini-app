@@ -8,7 +8,7 @@ bot.start(ctx => {
   ctx.reply("Hello!");
   ctx.replyWithHTML(
     "Click the button below:",
-    Markup.keyboard([Markup.button.webApp("Open WebApp", webUrl)])
+    Markup.keyboard([Markup.button.webApp("Open WebApp", webUrl + "/feedback")])
   );
 });
 
