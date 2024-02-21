@@ -10,6 +10,10 @@ import { TelegramService } from '../../service/telegram.service';
       height: 70vh;
       justify-content: center;
     }
+    textarea {
+        font-size: 22px; 
+    }
+
   `],
   template: `<form class="centered form">
     <h2 class="mb">Feedback</h2>
@@ -23,7 +27,7 @@ export class FeedbackComponent  implements OnInit, OnDestroy{
   }
   ngOnInit(): void {
     this.telegram.MainButton.setText('Send Message');
-    this.telegram.MainButton.show();
+    this.telegram.MainButton.hide();
     this.telegram.MainButton.onClick(this.sendData);
   }
   sendData(){
@@ -36,6 +40,11 @@ export class FeedbackComponent  implements OnInit, OnDestroy{
   feedback = signal('');
 
   hendleChange(event){
-    this.feedback.set(event.target.value)
+    this.feedback.set(event.target.value);
+    if(this.feedback().trim()){
+      this.telegram.MainButton.show();
+    }else{
+      this.telegram.MainButton.hide();
+    }
   }
 }
